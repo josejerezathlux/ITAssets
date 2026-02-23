@@ -13,12 +13,9 @@ class Room extends Model
     {
         return $this->hasMany(Asset::class);
     }
-<<<<<<< HEAD
-=======
 
     public function mapShapes(): HasMany
     {
         return $this->hasMany(MapRoom::class, 'room_id');
     }
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 }

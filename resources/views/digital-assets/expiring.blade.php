@@ -84,6 +84,6 @@
 </div>
 
 @push('styles')
-<link href="{{ asset('css/license-expiry.css') }}" rel="stylesheet">
+<link href="{{ rtrim(config('app.asset_url') ?? url('/'), '/') }}/css/license-expiry.css" rel="stylesheet">
 @endpush
 @endsection

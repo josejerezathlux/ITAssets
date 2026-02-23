@@ -56,11 +56,7 @@
     </div>
     <div class="mt-3">
         <button type="submit" class="btn btn-primary"><i class="bi bi-check-lg me-1"></i>Create user</button>
-<<<<<<< HEAD
-        <a href="{{ route('users.index') }}" class="btn btn-outline-secondary">Cancel</a>
-=======
         <a href="{{ route('users.index') }}" class="btn btn-cancel">Cancel</a>
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
     </div>
 </form>
 
@@ -107,11 +103,7 @@
                     <div id="newRoleFormError" class="alert alert-danger mt-2 d-none" role="alert"></div>
                 </div>
                 <div class="modal-footer">
-<<<<<<< HEAD
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
-=======
                     <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
                     <button type="submit" class="btn btn-primary" id="newRoleSubmitBtn"><i class="bi bi-check-lg me-1"></i>Create role</button>
                 </div>
             </form>

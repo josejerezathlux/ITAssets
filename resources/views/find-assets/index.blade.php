@@ -3,7 +3,7 @@
 @section('title', 'Find assets')
 
 @push('styles')
-<link href="{{ asset('css/find-assets.css') }}" rel="stylesheet">
+<link href="{{ rtrim(config('app.asset_url') ?? url('/'), '/') }}/css/find-assets.css" rel="stylesheet">
 @endpush
 
 @section('content')

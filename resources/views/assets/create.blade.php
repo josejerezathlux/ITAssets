@@ -103,11 +103,7 @@
     </div>
 
     <button type="submit" class="btn btn-primary">Create asset</button>
-<<<<<<< HEAD
-    <a href="{{ route('assets.index') }}" class="btn btn-link">Cancel</a>
-=======
     <a href="{{ route('assets.index') }}" class="btn btn-cancel">Cancel</a>
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 </form>
 
 @push('scripts')

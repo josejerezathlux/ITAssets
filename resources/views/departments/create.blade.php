@@ -31,11 +31,7 @@
     </div>
     <div class="mt-3">
         <button type="submit" class="btn btn-primary"><i class="bi bi-check-lg me-1"></i>Add department</button>
-<<<<<<< HEAD
-        <a href="{{ route('departments.index') }}" class="btn btn-outline-secondary">Cancel</a>
-=======
         <a href="{{ route('departments.index') }}" class="btn btn-cancel">Cancel</a>
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
     </div>
 </form>
 @endsection

@@ -7,9 +7,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class AssetCategory extends Model
 {
-<<<<<<< HEAD
-    protected $fillable = ['name', 'slug'];
-=======
     protected $fillable = ['name', 'slug', 'icon'];
 
     public static function defaultIconKey(): string
@@ -24,7 +21,6 @@ class AssetCategory extends Model
         }
         return config('map_icons.category_slug_to_icon')[$this->slug ?? ''] ?? self::defaultIconKey();
     }
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 
     public function assets(): HasMany
     {

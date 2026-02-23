@@ -34,10 +34,6 @@
         </div>
     </div>
     <button type="submit" class="btn btn-primary">Save changes</button>
-<<<<<<< HEAD
-    <a href="{{ route('rooms.index') }}" class="btn btn-link">Cancel</a>
-=======
     <a href="{{ route('rooms.index') }}" class="btn btn-cancel">Cancel</a>
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 </form>
 @endsection

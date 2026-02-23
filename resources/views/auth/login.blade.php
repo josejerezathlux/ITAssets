@@ -6,7 +6,7 @@
     <title>{{ config('app.name') }} – Sign in</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="{{ asset('css/corporate.css') }}" rel="stylesheet">
+    <link href="{{ rtrim(config('app.asset_url') ?? url('/'), '/') }}/css/corporate.css" rel="stylesheet">
 </head>
 <body class="login-page">
     <div class="login-page-bg" aria-hidden="true"></div>

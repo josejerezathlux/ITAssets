@@ -1,48 +1,4 @@
 :root {
-<<<<<<< HEAD
-  --fluent-primary: #0078d4;
-  --fluent-primary-hover: #106ebe;
-  --fluent-primary-light: #e6f2fb;
-  --fluent-bg: #f6f5f4;
-  --fluent-bg-card: #ffffff;
-  --fluent-border: #edebe9;
-  --fluent-bg-header: #ebe9e7;
-  --fluent-text: #323130;
-  --fluent-text-secondary: #605e5c;
-  --fluent-success: #107c10;
-  --fluent-success-bg: #dff6dd;
-  --fluent-warning: #ff8c00;
-  --fluent-warning-bg: #fff4ce;
-  --fluent-danger: #d13438;
-  --fluent-danger-bg: #fde7e9;
-  --fluent-info: #0078d4;
-  --fluent-info-bg: #e6f2fb;
-  --fluent-neutral: #5c5c5c;
-  --fluent-neutral-bg: #f3f2f1;
-  --fluent-radius: 4px;
-  --fluent-radius-lg: 8px;
-  --corp-primary: var(--fluent-primary);
-  --corp-primary-dark: var(--fluent-primary-hover);
-  --corp-primary-light: var(--fluent-primary-light);
-  --corp-sidebar: #faf9f8;
-  --corp-sidebar-hover: #edebe9;
-  --corp-sidebar-border: #edebe9;
-  --corp-sidebar-text: var(--fluent-text);
-  --corp-sidebar-text-muted: var(--fluent-text-secondary);
-  --corp-accent: var(--fluent-primary);
-  --corp-bg: var(--fluent-bg);
-  --corp-card-bg: var(--fluent-bg-card);
-  --corp-border: var(--fluent-border);
-  --corp-text: var(--fluent-text);
-  --corp-text-muted: var(--fluent-text-secondary);
-  --corp-success: var(--fluent-success);
-  --corp-warning: var(--fluent-warning);
-  --corp-danger: var(--fluent-danger);
-  --corp-shadow: none;
-  --corp-shadow-lg: none;
-  --corp-radius: var(--fluent-radius);
-  --corp-sidebar-width: 260px;
-=======
   --surface-base: #fafbfc;
   --surface-layer: #ffffff;
   --surface-overlay: #ffffff;
@@ -124,44 +80,10 @@
   --corp-shadow-lg: var(--shadow-m);
   --corp-radius: var(--radius-s);
   --corp-sidebar-width: var(--sidebar-width);
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 }
 
 body {
   font-family: 'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMacSystemFont, sans-serif;
-<<<<<<< HEAD
-  background: var(--corp-bg);
-  color: var(--corp-text);
-  min-height: 100vh;
-  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes themeReveal {
-  from {
-    opacity: 0;
-    filter: blur(6px);
-  }
-  to {
-    opacity: 1;
-    filter: blur(0);
-  }
-}
-
-.nav-icon {
-  width: 1.25rem;
-  margin-right: 0.75rem;
-  opacity: 0.9;
-  text-align: center;
-}
-.app-sidebar-nav .nav-link.active .nav-icon { opacity: 1; }
-
-.app-wrap {
-  display: flex;
-  min-height: 100vh;
-  animation: themeReveal 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-=======
   background: var(--surface-base);
   color: var(--text-primary);
   min-height: 100vh;
@@ -171,7 +93,6 @@ body {
 .app-wrap {
   display: flex;
   min-height: 100vh;
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 }
 
 .app-sidebar {
@@ -179,17 +100,6 @@ body {
   left: 0;
   top: 0;
   bottom: 0;
-<<<<<<< HEAD
-  width: var(--corp-sidebar-width);
-  max-height: 100vh;
-  background: var(--corp-sidebar);
-  color: var(--corp-sidebar-text);
-  display: flex;
-  flex-direction: column;
-  border-right: 1px solid var(--corp-sidebar-border);
-  overflow: hidden;
-  z-index: 1020;
-=======
   width: var(--sidebar-width);
   background: var(--sidebar-bg);
   border-right: 1px solid var(--sidebar-border);
@@ -197,7 +107,6 @@ body {
   flex-direction: column;
   z-index: 1020;
   overflow: hidden;
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 }
 
 .app-sidebar-brand {
@@ -205,11 +114,7 @@ body {
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-<<<<<<< HEAD
-  border-bottom: 1px solid var(--corp-sidebar-border);
-=======
   border-bottom: 1px solid var(--sidebar-border);
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
   color: var(--corp-sidebar-text);
   text-decoration: none;
 }
@@ -220,58 +125,6 @@ body {
 }
 
 .app-sidebar-nav {
-<<<<<<< HEAD
-  padding: 1rem 0;
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
-  text-align: left;
-}
-
-.app-sidebar-nav .nav-link {
-  color: var(--corp-sidebar-text-muted);
-  padding: .6rem 1.5rem;
-  font-size: .9rem;
-  border-left: 3px solid transparent;
-  transition: background .15s, border-color .15s, color .15s;
-  text-align: left;
-}
-.app-sidebar-nav .nav-link:not(.nav-link-dropdown-toggle) {
-  padding-left: 1.75rem;
-}
-
-.app-sidebar-nav .nav-link:hover {
-  background: var(--corp-sidebar-hover);
-  color: var(--corp-sidebar-text);
-}
-
-.app-sidebar-nav .nav-link.active {
-  background: var(--corp-sidebar-hover);
-  border-left-color: var(--corp-primary);
-  color: var(--corp-primary);
-}
-
-.app-sidebar-nav .nav-dropdown {
-  margin: 0;
-  padding: 0;
-}
-.app-sidebar-nav .nav-dropdown .collapse {
-  margin: 0;
-  padding: 0;
-}
-.app-sidebar-nav .nav-link-dropdown-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 0;
-  padding: .6rem 1.5rem;
-  border-left: 3px solid transparent;
-}
-.app-sidebar-nav .nav-link-dropdown-toggle .nav-icon {
-  margin-left: 0;
-  margin-right: 0.75rem;
-}
-=======
   padding: 0.75rem 0;
   flex: 1;
   overflow-y: auto;
@@ -322,51 +175,15 @@ body {
   border-radius: var(--corp-radius);
   border-left: 3px solid transparent;
 }
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .app-sidebar-nav .nav-link-dropdown-toggle::after {
   content: '';
   width: 0;
   height: 0;
   margin-left: auto;
-<<<<<<< HEAD
-  flex-shrink: 0;
-=======
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid currentColor;
   opacity: 0.7;
-<<<<<<< HEAD
-  transition: transform .2s;
-}
-.app-sidebar-nav .nav-dropdown.open .nav-link-dropdown-toggle::after {
-  transform: rotate(180deg);
-}
-.app-sidebar-nav .nav-dropdown-inner {
-  margin: 0;
-  padding: 0 0 0.25rem 1.5rem;
-}
-.app-sidebar-nav .nav-dropdown-inner .nav-link {
-  margin: 0;
-  padding: .4rem 1rem .4rem 1.5rem;
-  font-size: 0.85rem;
-  border-left-width: 2px;
-}
-.app-sidebar-nav .nav-dropdown-inner .nav-link .nav-icon {
-  display: none;
-}
-
-.app-sidebar-footer {
-  padding: 1rem 1.5rem;
-  border-top: 1px solid var(--corp-sidebar-border);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.875rem;
-  text-align: center;
-  flex-shrink: 0;
-}
-=======
   transition: transform 0.2s;
 }
 .app-sidebar-nav .nav-dropdown.open .nav-link-dropdown-toggle::after { transform: rotate(180deg); }
@@ -401,7 +218,6 @@ body {
   flex-shrink: 0;
 }
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .app-sidebar-user {
   display: flex;
   align-items: center;
@@ -415,68 +231,25 @@ body {
   text-overflow: ellipsis;
   max-width: 100%;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .app-sidebar-user-icon {
   font-size: 1.5rem;
   flex-shrink: 0;
   color: var(--corp-sidebar-text-muted);
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .app-sidebar-user-name {
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .app-sidebar-footer-actions {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
 }
-<<<<<<< HEAD
-.app-sidebar-footer-form {
-  margin: 0;
-}
-.app-sidebar-footer-form--icon {
-  display: inline-block;
-}
-.app-sidebar-btn-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  padding: 0;
-  border: 1px solid var(--corp-sidebar-border);
-  background: transparent;
-  border-radius: 8px;
-  color: var(--corp-sidebar-text-muted);
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-  will-change: transform;
-}
-.app-sidebar-btn-icon:hover {
-  background: var(--corp-sidebar-hover);
-  color: var(--corp-sidebar-text);
-  transform: scale(1.05);
-}
-.app-sidebar-btn-icon:active {
-  transform: scale(0.98);
-}
-.app-sidebar-btn-icon i {
-  pointer-events: none;
-=======
 
 .app-sidebar-btn-icon {
   width: 36px;
@@ -507,47 +280,10 @@ body {
   inset: 0;
   background: rgba(0,0,0,0.4);
   z-index: 1019;
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 }
 
 .app-main {
   flex: 1;
-<<<<<<< HEAD
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  margin-left: var(--corp-sidebar-width);
-  height: 100vh;
-  overflow-y: auto;
-}
-
-.app-topbar {
-  background: var(--corp-card-bg);
-  border-bottom: 1px solid var(--corp-border);
-  padding: .75rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: .75rem;
-}
-
-@media (min-width: 992px) {
-  .app-topbar {
-    display: none;
-  }
-}
-
-.app-topbar-actions {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-}
-
-.app-topbar-actions .dropdown-toggle {
-  font-size: .875rem;
-  color: var(--corp-text);
-=======
   margin-left: var(--sidebar-width);
   min-width: 0;
   display: flex;
@@ -565,7 +301,6 @@ body {
 
 @media (min-width: 992px) {
   .app-topbar { display: none; }
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 }
 
 .app-content {
@@ -573,165 +308,6 @@ body {
   flex: 1;
 }
 
-<<<<<<< HEAD
-.modal { z-index: 1060; }
-.modal-backdrop { z-index: 1050; }
-
-.corp-card {
-  background: var(--corp-card-bg);
-  border: 1px solid var(--corp-border);
-  border-radius: var(--corp-radius);
-  overflow: hidden;
-}
-
-.corp-card-header {
-  padding: .875rem 1.25rem;
-  font-weight: 600;
-  font-size: .95rem;
-  color: var(--corp-text);
-  background: var(--fluent-bg);
-  border-bottom: 1px solid var(--corp-border);
-}
-
-.corp-card-body {
-  padding: 1.25rem;
-}
-
-.corp-card-body.p-0 {
-  padding: 0;
-}
-
-.report-card-link {
-  display: block;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
-}
-.report-card-link:hover {
-  border-color: var(--fluent-primary);
-  box-shadow: 0 2px 8px rgba(0, 120, 212, 0.15);
-}
-.report-card-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  background: var(--fluent-primary-light);
-  color: var(--fluent-primary);
-  border-radius: var(--fluent-radius);
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-}
-.report-card-link .corp-card-body { padding: 1.25rem; }
-.report-card-link h3 { color: var(--fluent-text); }
-.report-card-link:hover h3 { color: var(--fluent-primary); }
-body.dark-mode .report-card-link h3 { color: var(--corp-text); }
-body.dark-mode .report-card-link:hover h3 { color: #6cb8f6; }
-
-.corp-stat-card {
-  background: var(--corp-card-bg);
-  border: 1px solid var(--corp-border);
-  border-radius: var(--corp-radius);
-  padding: 1.25rem;
-}
-
-.corp-stat-label {
-  font-size: .75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  color: var(--corp-text-muted);
-  margin-bottom: .25rem;
-}
-
-.corp-stat-value {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--corp-primary);
-  line-height: 1.2;
-}
-
-.btn-primary {
-  background: var(--corp-primary);
-  border-color: var(--corp-primary);
-}
-
-.btn-primary:hover {
-  background: var(--corp-primary-dark);
-  border-color: var(--corp-primary-dark);
-}
-
-.btn-outline-primary {
-  color: var(--corp-primary);
-  border-color: var(--corp-primary);
-}
-
-.btn-outline-primary:hover {
-  background: rgba(13, 71, 161, .08);
-  color: var(--corp-primary-dark);
-  border-color: var(--corp-primary-dark);
-}
-
-.corp-table {
-  margin: 0;
-}
-
-.corp-table thead th {
-  font-size: .75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  color: var(--fluent-text-secondary);
-  background: var(--fluent-bg-header);
-  border-bottom: none;
-  padding: .75rem 1rem;
-  white-space: nowrap;
-}
-
-.corp-table tbody td {
-  padding: .875rem 1rem;
-  vertical-align: middle;
-  border-bottom: 1px solid var(--corp-border);
-}
-
-.corp-table tbody tr:hover {
-  background: #f8fafc;
-}
-
-.corp-table tbody tr:last-child td {
-  border-bottom: 0;
-}
-
-.corp-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.25rem 0.5rem;
-  margin: -0.25rem -0.5rem;
-  color: var(--corp-text);
-  font-weight: 500;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-.corp-link:hover {
-  background-color: rgba(0, 120, 212, 0.08);
-  color: var(--fluent-primary);
-}
-.corp-link::after {
-  content: '›';
-  font-size: 1.1em;
-  font-weight: 700;
-  opacity: 0;
-  transform: translateX(-2px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-.corp-link:hover::after {
-  opacity: 0.8;
-  transform: translateX(0);
-}
-
-=======
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .corp-page-header {
   display: flex;
   align-items: center;
@@ -749,30 +325,6 @@ body.dark-mode .report-card-link:hover h3 { color: #6cb8f6; }
   letter-spacing: -0.02em;
 }
 
-<<<<<<< HEAD
-.form-control, .form-select {
-  border-radius: 6px;
-  border-color: var(--corp-border);
-}
-
-.form-control:focus, .form-select:focus {
-  border-color: var(--fluent-primary);
-  outline: 2px solid rgba(0, 120, 212, .2);
-  outline-offset: 0;
-}
-
-.form-label {
-  font-weight: 500;
-  color: var(--corp-text);
-  margin-bottom: .35rem;
-}
-
-.alert {
-  border-radius: var(--corp-radius);
-  border: 1px solid transparent;
-}
-
-=======
 .corp-card {
   background: var(--corp-card-bg);
   border: 1px solid var(--corp-border);
@@ -869,40 +421,10 @@ form a.btn-outline-secondary {
 /* -------------------------------------------------------------------------- */
 /* Badges — pill with icon support */
 /* -------------------------------------------------------------------------- */
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .badge {
   font-weight: 600;
   font-size: 0.75rem;
   padding: 0.35em 0.65em;
-<<<<<<< HEAD
-  border-radius: 4px;
-  letter-spacing: 0.02em;
-}
-.badge .bi { font-size: 0.875em; vertical-align: -0.05em; margin-right: 0.2em; }
-.fluent-badge-primary { background: var(--fluent-primary-light); color: var(--fluent-primary); }
-.fluent-badge-success { background: var(--fluent-success-bg); color: var(--fluent-success); }
-.fluent-badge-warning { background: var(--fluent-warning-bg); color: #74480c; }
-.fluent-badge-danger { background: var(--fluent-danger-bg); color: var(--fluent-danger); }
-.fluent-badge-info { background: var(--fluent-info-bg); color: var(--fluent-info); }
-.fluent-badge-neutral { background: var(--fluent-neutral-bg); color: var(--fluent-neutral); }
-
-.asset-qr-soon { padding-right: 2.25rem; }
-.badge-soon {
-  font-size: 0.6rem;
-  font-weight: 600;
-  padding: 0.15em 0.4em;
-  position: absolute;
-  top: -4px;
-  right: 4px;
-  background: var(--fluent-primary);
-  color: #fff;
-  border-radius: 3px;
-  white-space: nowrap;
-}
-body.dark-mode .badge-soon {
-  background: #6cb8f6;
-  color: #1a1d24;
-=======
   border-radius: var(--corp-radius);
   letter-spacing: 0.02em;
 }
@@ -996,54 +518,11 @@ body.dark-mode .badge-soon {
 .alert {
   border-radius: var(--fluent-radius-lg);
   border: 1px solid transparent;
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 }
 
 .fluent-info-card,
 .fluent-tip-card,
 .fluent-success-card {
-<<<<<<< HEAD
-  position: relative;
-}
-.fluent-info-card {
-  background: var(--fluent-info-bg);
-  border: 1px solid rgba(0, 120, 212, 0.3);
-  border-radius: var(--fluent-radius-lg);
-  padding: 1rem 1.25rem;
-  padding-right: 2.5rem;
-  display: flex;
-  gap: 0.75rem;
-  align-items: flex-start;
-}
-.fluent-info-card .fluent-info-icon { color: var(--fluent-primary); font-size: 1.25rem; flex-shrink: 0; }
-.fluent-info-card .fluent-info-body { font-size: 0.9375rem; color: var(--fluent-text); }
-.fluent-info-card .fluent-info-title { font-weight: 600; margin-bottom: 0.25rem; }
-.fluent-tip-card {
-  background: #fff9e6;
-  border: 1px solid rgba(255, 140, 0, 0.25);
-  border-radius: var(--fluent-radius-lg);
-  padding: 1rem 1.25rem;
-  padding-right: 2.5rem;
-  display: flex;
-  gap: 0.75rem;
-  align-items: flex-start;
-}
-.fluent-tip-card .fluent-tip-icon { color: var(--fluent-warning); font-size: 1.25rem; flex-shrink: 0; }
-.fluent-tip-card .fluent-tip-body { font-size: 0.9375rem; color: var(--fluent-text); }
-.fluent-tip-card .fluent-tip-title { font-weight: 600; margin-bottom: 0.25rem; }
-.fluent-success-card {
-  background: var(--fluent-success-bg);
-  border: 1px solid rgba(16, 124, 16, 0.3);
-  border-radius: var(--fluent-radius-lg);
-  padding: 1rem 1.25rem;
-  padding-right: 2.5rem;
-  display: flex;
-  gap: 0.75rem;
-  align-items: flex-start;
-}
-.fluent-success-card .fluent-success-icon { color: var(--fluent-success); font-size: 1.25rem; flex-shrink: 0; }
-.fluent-success-card .fluent-success-body { font-size: 0.9375rem; color: var(--fluent-text); }
-=======
   border-radius: var(--fluent-radius-lg);
   padding: 1rem 1.25rem;
   padding-right: 2.75rem;
@@ -1084,44 +563,11 @@ body.dark-mode .badge-soon {
 .fluent-success-card .fluent-success-icon { color: var(--green); font-size: 1.35rem; flex-shrink: 0; }
 .fluent-success-card .fluent-success-title { font-weight: 600; margin-bottom: 0.25rem; }
 .fluent-success-card .fluent-success-body { font-size: 0.9375rem; color: var(--text-primary); }
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 
 .fluent-card-close {
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
-<<<<<<< HEAD
-  width: 1.75rem;
-  height: 1.75rem;
-  padding: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background: transparent;
-  color: var(--corp-text-muted);
-  border-radius: var(--fluent-radius);
-  cursor: pointer;
-  font-size: 1rem;
-  transition: color .15s, background .15s;
-}
-.fluent-card-close:hover {
-  color: var(--corp-text);
-  background: rgba(0,0,0,.06);
-}
-.fluent-card-close:focus {
-  outline: 2px solid var(--fluent-primary);
-  outline-offset: 1px;
-}
-
-.list-group-item {
-  border-color: var(--corp-border);
-}
-
-.dashboard-v2 {
-  padding-bottom: 1.5rem;
-}
-=======
   width: 32px;
   height: 32px;
   padding: 0;
@@ -1359,7 +805,6 @@ a.dash-pill--outline:hover .dashboard-pill-value { color: var(--blue); }
   color: var(--blue-hover);
 }
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .dashboard-hero {
   display: flex;
   flex-wrap: wrap;
@@ -1371,26 +816,6 @@ a.dash-pill--outline:hover .dashboard-pill-value { color: var(--blue); }
   border: 1px solid var(--corp-border);
   border-radius: var(--fluent-radius-lg);
 }
-<<<<<<< HEAD
-.dashboard-hero-main {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-.dashboard-hero-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--corp-text-muted);
-}
-.dashboard-hero-value {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--fluent-primary);
-  line-height: 1.1;
-}
-=======
 
 .dashboard-hero-main {
   display: flex;
@@ -1414,51 +839,17 @@ a.dash-pill--outline:hover .dashboard-pill-value { color: var(--blue); }
   line-height: 1.1;
 }
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .dashboard-hero-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .dashboard-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   padding: 0.4rem 0.75rem;
-<<<<<<< HEAD
-  border-radius: 8px;
-  text-decoration: none;
-  color: var(--corp-text);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-.dashboard-pill:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0,0,0,.08);
-  color: var(--corp-text);
-}
-.dashboard-pill-value {
-  font-weight: 700;
-  font-size: 1rem;
-}
-.dashboard-pill-label {
-  font-size: 0.8125rem;
-  color: var(--corp-text-muted);
-}
-.dashboard-pill--success { background: var(--fluent-success-bg); }
-.dashboard-pill--success .dashboard-pill-value { color: var(--fluent-success); }
-.dashboard-pill--info { background: var(--fluent-info-bg); }
-.dashboard-pill--info .dashboard-pill-value { color: var(--fluent-info); }
-.dashboard-pill--warning { background: var(--fluent-warning-bg); }
-.dashboard-pill--warning .dashboard-pill-value { color: #74480c; }
-.dashboard-pill--danger { background: var(--fluent-danger-bg); }
-.dashboard-pill--danger .dashboard-pill-value { color: var(--fluent-danger); }
-.dashboard-pill--neutral { background: var(--fluent-neutral-bg); }
-.dashboard-pill--neutral .dashboard-pill-value { color: var(--fluent-neutral); }
-=======
   border-radius: var(--corp-radius);
   text-decoration: none;
   color: var(--corp-text);
@@ -1490,21 +881,10 @@ a.dash-pill--outline:hover .dashboard-pill-value { color: var(--blue); }
 .dashboard-pill--danger .dashboard-pill-value { color: var(--red); }
 .dashboard-pill--neutral { background: var(--violet-subtle); border-color: rgba(91, 33, 182, 0.2); }
 .dashboard-pill--neutral .dashboard-pill-value { color: var(--violet); }
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 
 .dashboard-charts-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-<<<<<<< HEAD
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-}
-@media (max-width: 767.98px) {
-  .dashboard-charts-row { grid-template-columns: 1fr; }
-}
-.dashboard-chart-card {
-  background: var(--corp-card-bg);
-=======
   gap: 1.25rem;
   margin-bottom: 1.5rem;
 }
@@ -1523,38 +903,10 @@ a.dash-pill--outline:hover .dashboard-pill-value { color: var(--blue); }
 
 .dashboard-chart-card {
   background: var(--surface-layer);
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
   border: 1px solid var(--corp-border);
   border-radius: var(--fluent-radius-lg);
   overflow: hidden;
 }
-<<<<<<< HEAD
-.dashboard-chart-card .corp-card-header {
-  padding: 0.75rem 1rem;
-  font-size: 0.9rem;
-}
-.dashboard-chart-body {
-  padding: 0.75rem 1rem 1rem;
-  min-height: 220px;
-}
-
-.dashboard-bottom-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1.2fr;
-  gap: 1rem;
-}
-@media (max-width: 991.98px) {
-  .dashboard-bottom-row { grid-template-columns: 1fr 1fr; }
-  .dash-block--wide { grid-column: 1 / -1; }
-}
-@media (max-width: 575.98px) {
-  .dashboard-bottom-row { grid-template-columns: 1fr; }
-  .dash-block--wide { grid-column: 1; }
-}
-
-.dash-block {
-  background: var(--corp-card-bg);
-=======
 
 .dashboard-chart-card .corp-card-header {
   padding: 1rem 1.25rem;
@@ -1596,51 +948,17 @@ a.dash-pill--outline:hover .dashboard-pill-value { color: var(--blue); }
 /* Dash blocks — list cards with colored accent */
 .dash-block {
   background: var(--surface-layer);
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
   border: 1px solid var(--corp-border);
   border-radius: var(--fluent-radius-lg);
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .dash-block__header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-<<<<<<< HEAD
-  padding: 0.75rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--corp-text);
-  background: var(--dash-block-header-bg, #f6f5f4);
-  border-bottom: 1px solid var(--corp-border);
-}
-.dash-block__icon {
-  color: var(--corp-text-muted);
-  font-size: 1.1rem;
-}
-.dash-block__title {
-  margin: 0;
-  font-size: inherit;
-  font-weight: inherit;
-}
-.dash-block__body {
-  padding: 0;
-  flex: 1;
-  min-height: 0;
-}
-.dash-block__list {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-=======
   padding: 0.875rem 1.25rem;
   font-size: 0.9375rem;
   font-weight: 600;
@@ -1667,32 +985,11 @@ a.dash-pill--outline:hover .dashboard-pill-value { color: var(--blue); }
 .dash-block__body { padding: 0; flex: 1; min-height: 0; }
 .dash-block__list { margin: 0; padding: 0; list-style: none; }
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .dash-block__row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-<<<<<<< HEAD
-  padding: 0.6rem 1rem;
-  font-size: 0.875rem;
-  color: var(--corp-text);
-  text-decoration: none;
-  border-bottom: 1px solid var(--corp-border);
-  transition: background 0.15s;
-}
-.dash-block__row:last-child {
-  border-bottom: 0;
-}
-.dash-block__row:hover {
-  background: var(--dash-block-row-hover, #f0eeec);
-  color: var(--corp-text);
-}
-.dash-block__label {
-  font-weight: 500;
-  min-width: 0;
-}
-=======
   padding: 0.625rem 1.25rem;
   font-size: 0.9375rem;
   color: var(--text-primary);
@@ -1708,28 +1005,11 @@ a.dash-pill--outline:hover .dashboard-pill-value { color: var(--blue); }
 
 .dash-block__label { font-weight: 500; min-width: 0; }
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .dash-block__badge {
   flex-shrink: 0;
   font-size: 0.75rem;
   font-weight: 600;
   padding: 0.25em 0.5em;
-<<<<<<< HEAD
-  border-radius: 4px;
-}
-.dash-block__badge--warranty {
-  background: var(--fluent-warning-bg);
-  color: #74480c;
-}
-.dash-block__badge--category {
-  background: var(--fluent-neutral-bg);
-  color: var(--fluent-neutral);
-}
-.dash-block__badge--type {
-  background: var(--fluent-info-bg);
-  color: var(--fluent-info);
-}
-=======
   border-radius: var(--radius-s);
 }
 
@@ -1737,136 +1017,11 @@ a.dash-pill--outline:hover .dashboard-pill-value { color: var(--blue); }
 .dash-block__badge--category { background: var(--violet-subtle); color: var(--violet); }
 .dash-block__badge--type { background: var(--cyan-subtle); color: var(--cyan); }
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .dash-block__row--maintenance {
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 0.5rem 0.75rem;
 }
-<<<<<<< HEAD
-.dash-block__row--maintenance .dash-block__label {
-  margin-right: 0.25rem;
-}
-.dash-block__row--maintenance .dash-block__badge {
-  order: 0;
-}
-.dash-block__row--maintenance .dash-block__meta {
-  width: 100%;
-  font-size: 0.8125rem;
-  color: var(--corp-text-muted);
-  order: 1;
-  padding-left: 0;
-}
-.dash-block__empty {
-  margin: 0;
-  padding: 0.75rem 1rem;
-  font-size: 0.875rem;
-  color: var(--corp-text-muted);
-}
-
-body.dark-mode .dash-block__header {
-  background: var(--corp-sidebar-hover);
-  color: var(--corp-text);
-  border-color: var(--corp-border);
-}
-body.dark-mode .dash-block__icon {
-  color: var(--corp-text-muted);
-}
-body.dark-mode .dash-block__row {
-  color: var(--corp-text);
-  border-color: var(--corp-border);
-}
-body.dark-mode .dash-block__row:hover {
-  background: var(--corp-sidebar-hover);
-  color: var(--corp-text);
-}
-body.dark-mode .dash-block__badge--warranty {
-  background: rgba(255, 140, 0, 0.25);
-  color: #ffb366;
-}
-body.dark-mode .dash-block__badge--category {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--corp-text-muted);
-}
-body.dark-mode .dash-block__badge--type {
-  background: rgba(0, 120, 212, 0.25);
-  color: #6cb8f6;
-}
-body.dark-mode .dash-block__meta {
-  color: var(--corp-text-muted);
-}
-body.dark-mode .dash-block__empty {
-  color: var(--corp-text-muted);
-}
-
-body.dark-mode .fluent-badge-primary {
-  background: rgba(0, 120, 212, 0.28);
-  color: #6cb8f6;
-}
-body.dark-mode .fluent-badge-success {
-  background: rgba(16, 124, 16, 0.28);
-  color: #7fdb7f;
-}
-body.dark-mode .fluent-badge-warning {
-  background: rgba(255, 140, 0, 0.28);
-  color: #ffb366;
-}
-body.dark-mode .fluent-badge-danger {
-  background: rgba(209, 52, 56, 0.28);
-  color: #f28b8e;
-}
-body.dark-mode .fluent-badge-info {
-  background: rgba(0, 120, 212, 0.25);
-  color: #6cb8f6;
-}
-body.dark-mode .fluent-badge-neutral {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--corp-text-muted);
-}
-body.dark-mode .badge.bg-success,
-body.dark-mode .badge.text-success {
-  background: rgba(16, 124, 16, 0.28) !important;
-  color: #7fdb7f !important;
-}
-
-body.dark-mode .dashboard-pill--success {
-  background: rgba(16, 124, 16, 0.28);
-}
-body.dark-mode .dashboard-pill--success .dashboard-pill-value { color: #7fdb7f; }
-body.dark-mode .dashboard-pill--info {
-  background: rgba(0, 120, 212, 0.25);
-}
-body.dark-mode .dashboard-pill--info .dashboard-pill-value { color: #6cb8f6; }
-body.dark-mode .dashboard-pill--warning {
-  background: rgba(255, 140, 0, 0.28);
-}
-body.dark-mode .dashboard-pill--warning .dashboard-pill-value { color: #ffb366; }
-body.dark-mode .dashboard-pill--danger {
-  background: rgba(209, 52, 56, 0.28);
-}
-body.dark-mode .dashboard-pill--danger .dashboard-pill-value { color: #f28b8e; }
-body.dark-mode .dashboard-pill--neutral {
-  background: rgba(255, 255, 255, 0.08);
-}
-body.dark-mode .dashboard-pill--neutral .dashboard-pill-value { color: var(--corp-text-muted); }
-
-.dashboard-empty {
-  margin: 0;
-  padding: 0.75rem 1rem;
-  color: var(--corp-text-muted);
-  font-size: 0.875rem;
-}
-
-.asset-filters {
-  --asset-filter-label: var(--corp-text-muted);
-}
-.asset-filters-bar {
-  background: var(--corp-card-bg);
-  border: 1px solid var(--corp-border);
-  border-radius: var(--corp-radius);
-  padding: 1rem 1.25rem;
-}
-=======
 
 .dash-block__row--maintenance .dash-block__label { margin-right: 0.25rem; }
 .dash-block__row--maintenance .dash-block__badge { order: 0; }
@@ -1894,68 +1049,12 @@ body.dark-mode .dashboard-pill--neutral .dashboard-pill-value { color: var(--cor
   padding: 1rem 1.25rem;
 }
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .asset-filters-row {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
   gap: 1rem 1.25rem;
 }
-<<<<<<< HEAD
-.asset-filter-label {
-  display: block;
-  font-size: .7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  color: var(--asset-filter-label);
-  margin-bottom: .35rem;
-}
-.asset-filter-search {
-  flex: 1;
-  min-width: 160px;
-}
-.asset-filter-field {
-  width: 140px;
-  min-width: 120px;
-}
-.asset-filter-actions {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  flex-shrink: 0;
-}
-.asset-filters-toolbar {
-  margin-top: .75rem;
-  padding-top: .75rem;
-  border-top: 1px solid var(--corp-border);
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: .25rem .5rem;
-}
-.asset-filters-toolbar .btn-link {
-  color: var(--corp-primary);
-}
-.asset-filters-toolbar .btn-link:hover {
-  color: var(--corp-primary-dark);
-}
-.asset-filters-divider {
-  color: var(--corp-text-muted);
-  font-weight: 700;
-  padding: 0 .25rem;
-  user-select: none;
-}
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.asset-show-tabs {
-  border-bottom: 1px solid var(--corp-border);
-  margin-bottom: 1.25rem;
-  gap: 0.25rem;
-}
-=======
 
 .asset-filter-search { flex: 1; min-width: 160px; }
 .asset-filter-field { width: 140px; min-width: 120px; }
@@ -2066,130 +1165,10 @@ body.dark-mode .dashboard-pill--neutral .dashboard-pill-value { color: var(--cor
   gap: 0.25rem;
 }
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .asset-show-tabs .nav-link {
   border: 1px solid transparent;
   border-radius: var(--corp-radius) var(--corp-radius) 0 0;
   padding: 0.5rem 1rem;
-<<<<<<< HEAD
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--corp-text-muted);
-  background: transparent;
-  transition: color .15s, background .15s, border-color .15s;
-}
-.asset-show-tabs .nav-link:hover {
-  color: var(--corp-text);
-  background: #f8fafc;
-}
-.asset-show-tabs .nav-link.active {
-  color: var(--corp-primary);
-  background: var(--corp-card-bg);
-  border-color: var(--corp-border);
-  border-bottom-color: var(--corp-card-bg);
-  margin-bottom: -1px;
-}
-.asset-show-tab-content {
-  margin-bottom: 1.5rem;
-}
-.asset-detail-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.asset-detail-row {
-  display: grid;
-  grid-template-columns: 10rem 1fr;
-  gap: 1rem;
-  padding: 0.75rem 1.25rem;
-  border-bottom: 1px solid var(--corp-border);
-  font-size: 0.9375rem;
-  align-items: start;
-}
-.asset-detail-row:last-child {
-  border-bottom: 0;
-}
-.asset-detail-row dt {
-  margin: 0;
-  font-weight: 500;
-  color: var(--corp-text-muted);
-}
-.asset-detail-row dd {
-  margin: 0;
-  color: var(--corp-text);
-}
-.asset-attachment-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.6rem 0;
-  border-bottom: 1px solid var(--corp-border);
-}
-.asset-attachment-row:last-child {
-  border-bottom: 0;
-}
-.asset-maintenance-form .min-width-200 {
-  min-width: 200px;
-}
-
-.asset-assignment-badge {
-  font-size: 0.875rem;
-}
-.asset-assignment-badge .text-muted { margin-right: 0.35rem; }
-.asset-assignment-badge a {
-  color: var(--corp-primary);
-  text-decoration: none;
-  font-weight: 500;
-}
-.asset-assignment-badge a:hover {
-  text-decoration: underline;
-}
-
-.asset-assignee-card {
-  margin: 0;
-}
-.asset-assignee-info {
-  margin-bottom: 1rem;
-}
-.asset-assignee-name {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-}
-.asset-assignee-name a {
-  color: var(--corp-text);
-  text-decoration: none;
-}
-.asset-assignee-name a:hover {
-  color: var(--corp-primary);
-}
-.asset-assignee-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 0;
-  font-size: 0.875rem;
-  color: var(--corp-text-muted);
-}
-.asset-assignee-meta span:not(:last-child)::after {
-  content: " · ";
-  margin-left: 0.15rem;
-}
-.asset-assignee-since {
-  margin-top: 0.25rem;
-}
-.asset-assignee-actions {
-  padding-top: 1rem;
-  border-top: 1px solid var(--corp-border);
-}
-.asset-assignee-card--empty .asset-assign-form {
-  margin-top: 0.5rem;
-}
-.asset-assignment-history {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-=======
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--corp-text-muted);
@@ -2244,182 +1223,11 @@ body.dark-mode .dashboard-pill--neutral .dashboard-pill-value { color: var(--cor
 .asset-assignee-card--empty .asset-assign-form { margin-top: 0.5rem; }
 
 .asset-assignment-history { list-style: none; margin: 0; padding: 0; }
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .asset-assignment-history li {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 0.35rem 0.5rem;
-<<<<<<< HEAD
-  padding: 0.6rem 1.25rem;
-  border-bottom: 1px solid var(--corp-border);
-  font-size: 0.875rem;
-}
-.asset-assignment-history li:last-child {
-  border-bottom: 0;
-}
-.asset-assignment-who {
-  font-weight: 500;
-  min-width: 8rem;
-}
-
-@media (max-width: 575.98px) {
-  .asset-detail-row {
-    grid-template-columns: 1fr;
-    gap: 0.25rem;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .asset-filters-row {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .asset-filter-search,
-  .asset-filter-field {
-    width: 100%;
-    min-width: 0;
-  }
-  .asset-filter-actions {
-    justify-content: flex-start;
-  }
-}
-
-body.dark-mode {
-  --corp-bg: #1a1d24;
-  --corp-card-bg: #22262e;
-  --corp-border: #2d323c;
-  --corp-text: #f3f4f6;
-  --corp-text-muted: #9ca3af;
-  --corp-sidebar: #16181d;
-  --corp-sidebar-hover: #22262e;
-  --corp-sidebar-border: #2d323c;
-  --corp-sidebar-text: #f3f4f6;
-  --corp-sidebar-text-muted: #9ca3af;
-}
-
-body.dark-mode .app-sidebar-brand {
-  color: #fff;
-}
-body.dark-mode .app-sidebar-brand:hover {
-  color: #fff;
-  opacity: .95;
-}
-body.dark-mode .app-sidebar-nav .nav-link {
-  color: var(--corp-sidebar-text-muted);
-}
-body.dark-mode .app-sidebar-nav .nav-link:hover,
-body.dark-mode .app-sidebar-nav .nav-link.active {
-  background: var(--corp-sidebar-hover);
-  color: #fff;
-}
-body.dark-mode .app-sidebar-nav .nav-link.active {
-  border-left-color: #fff;
-}
-body.dark-mode .app-sidebar-user,
-body.dark-mode .app-sidebar-user-name {
-  color: var(--corp-sidebar-text);
-}
-body.dark-mode .app-sidebar-user-icon {
-  color: var(--corp-sidebar-text-muted);
-}
-body.dark-mode .app-sidebar-btn-icon {
-  color: var(--corp-sidebar-text-muted);
-  border-color: var(--corp-sidebar-border);
-  background: rgba(255,255,255,.06);
-}
-body.dark-mode .app-sidebar-btn-icon:hover {
-  background: rgba(255,255,255,.1);
-  color: #fff;
-}
-
-body.dark-mode .app-topbar {
-  background: var(--corp-bg);
-  border-color: var(--corp-border);
-}
-
-body.dark-mode .corp-card-header {
-  background: var(--corp-sidebar-hover);
-  border-color: var(--corp-border);
-}
-
-body.dark-mode .corp-table thead th {
-  background: var(--corp-sidebar-hover);
-  border-color: var(--corp-border);
-  color: var(--corp-text-muted);
-}
-
-body.dark-mode .corp-table tbody td {
-  border-color: var(--corp-border);
-}
-
-body.dark-mode .corp-table tbody tr:hover {
-  background: var(--corp-sidebar-hover);
-}
-
-body.dark-mode .dashboard-list-item--action:hover {
-  background: var(--corp-sidebar-hover);
-}
-
-body.dark-mode .asset-show-tabs .nav-link:hover {
-  background: var(--corp-sidebar-hover);
-}
-
-body.dark-mode .fluent-info-card {
-  background: rgba(0, 120, 212, .18);
-  border-color: rgba(0, 120, 212, .45);
-}
-body.dark-mode .fluent-info-card .fluent-info-body,
-body.dark-mode .fluent-info-card .fluent-info-title {
-  color: #e8f4fc;
-}
-body.dark-mode .fluent-info-card .fluent-info-icon {
-  color: #6cb8f6;
-}
-body.dark-mode .fluent-tip-card {
-  background: rgba(255, 140, 0, .2);
-  border-color: rgba(255, 140, 0, .45);
-}
-body.dark-mode .fluent-tip-card .fluent-tip-body,
-body.dark-mode .fluent-tip-card .fluent-tip-title {
-  color: #fef3e0;
-}
-body.dark-mode .fluent-tip-card .fluent-tip-icon {
-  color: #ffb366;
-}
-body.dark-mode .fluent-success-card {
-  background: rgba(16, 124, 16, .2);
-  border-color: rgba(16, 124, 16, .45);
-}
-body.dark-mode .fluent-success-card .fluent-success-body,
-body.dark-mode .fluent-success-card .fluent-success-title {
-  color: #dff6dd;
-}
-body.dark-mode .fluent-card-close {
-  color: rgba(255, 255, 255, .85);
-}
-body.dark-mode .fluent-card-close:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, .15);
-}
-
-body.dark-mode .corp-link {
-  color: var(--corp-text);
-}
-body.dark-mode .corp-link:hover {
-  background-color: rgba(0, 120, 212, 0.2);
-  color: #6cb8f6;
-}
-
-.fluent-pagination-wrap {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-.fluent-pagination {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-=======
   padding: 0.625rem 1.25rem;
   border-bottom: 1px solid var(--border-subtle);
   font-size: 0.9375rem;
@@ -2494,7 +1302,6 @@ body.dark-mode .corp-link:hover {
 /* -------------------------------------------------------------------------- */
 .fluent-pagination-wrap { margin-top: 1.25rem; margin-bottom: 0.5rem; }
 .fluent-pagination { margin: 0; }
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .fluent-pagination-inner {
   display: flex;
   flex-wrap: wrap;
@@ -2502,69 +1309,14 @@ body.dark-mode .corp-link:hover {
   justify-content: space-between;
   gap: 1rem;
 }
-<<<<<<< HEAD
-.fluent-pagination-info {
-  flex-shrink: 0;
-}
-.fluent-pagination-info-text {
-  font-size: 0.8125rem;
-  color: var(--fluent-text-secondary);
-}
-.fluent-pagination-info-text strong {
-  font-weight: 600;
-  color: var(--fluent-text);
-}
-.fluent-pagination-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.fluent-pagination-item {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-=======
 .fluent-pagination-info-text { font-size: 0.8125rem; color: var(--text-secondary); }
 .fluent-pagination-info-text strong { font-weight: 600; color: var(--text-primary); }
 .fluent-pagination-list { display: flex; flex-wrap: wrap; align-items: center; gap: 2px; list-style: none; margin: 0; padding: 0; }
 .fluent-pagination-item { display: inline-flex; }
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .fluent-pagination-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-  min-width: 2rem;
-  height: 2rem;
-  padding: 0 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--fluent-text);
-  background: var(--fluent-bg-card);
-  border: 1px solid var(--fluent-border);
-  border-radius: var(--fluent-radius);
-  text-decoration: none;
-  transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
-}
-.fluent-pagination-link:hover {
-  background: var(--fluent-bg-header);
-  border-color: var(--fluent-border);
-  color: var(--fluent-text);
-}
-.fluent-pagination-link--icon {
-  min-width: 2rem;
-  padding: 0;
-  font-size: 1rem;
-}
-.fluent-pagination-item--active .fluent-pagination-link {
-  background: var(--fluent-primary);
-  border-color: var(--fluent-primary);
-=======
   min-width: 2.25rem;
   height: 2.25rem;
   padding: 0 0.5rem;
@@ -2586,100 +1338,10 @@ body.dark-mode .corp-link:hover {
 .fluent-pagination-item--active .fluent-pagination-link {
   background: var(--blue);
   border-color: var(--blue);
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
   color: #fff;
   cursor: default;
 }
 .fluent-pagination-item--active .fluent-pagination-link:hover {
-<<<<<<< HEAD
-  background: var(--fluent-primary-hover);
-  border-color: var(--fluent-primary-hover);
-  color: #fff;
-}
-.fluent-pagination-item--disabled .fluent-pagination-link {
-  background: var(--fluent-bg);
-  border-color: var(--fluent-border);
-  color: var(--fluent-text-secondary);
-  cursor: not-allowed;
-  opacity: 0.7;
-}
-.fluent-pagination-item--gap .fluent-pagination-link {
-  border: 0;
-  background: transparent;
-  cursor: default;
-  min-width: 1.5rem;
-}
-.fluent-pagination-item--gap .fluent-pagination-link:hover {
-  background: transparent;
-}
-
-body.dark-mode .fluent-pagination-link {
-  background: var(--corp-card-bg);
-  border-color: var(--corp-border);
-  color: var(--corp-text);
-}
-body.dark-mode .fluent-pagination-link:hover {
-  background: var(--corp-sidebar-hover);
-  border-color: var(--corp-border);
-  color: var(--corp-text);
-}
-body.dark-mode .fluent-pagination-item--active .fluent-pagination-link {
-  background: var(--fluent-primary);
-  border-color: var(--fluent-primary);
-  color: #fff;
-}
-body.dark-mode .fluent-pagination-item--disabled .fluent-pagination-link {
-  background: var(--corp-bg);
-  color: var(--fluent-text-secondary);
-  opacity: 0.6;
-}
-body.dark-mode .fluent-pagination-info-text {
-  color: var(--fluent-text-secondary);
-}
-body.dark-mode .fluent-pagination-info-text strong {
-  color: var(--corp-text);
-}
-
-@media (max-width: 575.98px) {
-  .fluent-pagination-inner {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center;
-  }
-  .fluent-pagination-list {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .app-sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 1030;
-    transform: translateX(-100%);
-    transition: transform .2s;
-  }
-  .app-sidebar.show {
-    transform: translateX(0);
-  }
-  .app-main {
-    margin-left: 0;
-  }
-  .app-sidebar-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,.4);
-    z-index: 1029;
-  }
-  .app-sidebar-overlay.show {
-    display: block;
-  }
-}
-
-=======
   background: var(--blue-hover);
   border-color: var(--blue-hover);
   color: #fff;
@@ -2697,51 +1359,20 @@ body.dark-mode .fluent-pagination-info-text strong {
 /* -------------------------------------------------------------------------- */
 /* Login page */
 /* -------------------------------------------------------------------------- */
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .login-page {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
-<<<<<<< HEAD
-  position: relative;
-  background: linear-gradient(145deg, #e8f4fc 0%, #f0f4f8 50%, #e8eef4 100%);
-  font-family: 'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-=======
   background: linear-gradient(160deg, #e8f4fc 0%, #f0f4f8 40%, #fafbfc 100%);
   font-family: 'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .login-page-bg {
   position: fixed;
   inset: 0;
   background-image:
-<<<<<<< HEAD
-    radial-gradient(circle at 20% 80%, rgba(0, 120, 212, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(0, 120, 212, 0.04) 0%, transparent 50%);
-  pointer-events: none;
-}
-.login-page-content {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 420px;
-}
-.login-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 2.5rem 2rem;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-}
-.login-card-brand {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-=======
     radial-gradient(circle at 15% 85%, rgba(0, 120, 212, 0.08) 0%, transparent 45%),
     radial-gradient(circle at 85% 15%, rgba(13, 148, 136, 0.06) 0%, transparent 45%);
   pointer-events: none;
@@ -2758,48 +1389,10 @@ body.dark-mode .fluent-pagination-info-text strong {
 
 .login-card-brand { text-align: center; margin-bottom: 2rem; }
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .login-brand-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-  width: 56px;
-  height: 56px;
-  background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
-  color: #fff;
-  border-radius: 12px;
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-}
-.login-brand-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #323130;
-  margin: 0 0 0.25rem 0;
-  letter-spacing: -0.02em;
-}
-.login-brand-tagline {
-  font-size: 0.9375rem;
-  color: #605e5c;
-  margin: 0;
-}
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-.login-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.375rem;
-}
-.login-label {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #323130;
-}
-=======
   width: 64px;
   height: 64px;
   background: linear-gradient(135deg, var(--blue) 0%, var(--blue-hover) 100%);
@@ -2823,45 +1416,11 @@ body.dark-mode .fluent-pagination-info-text strong {
 .login-field { display: flex; flex-direction: column; gap: 0.375rem; }
 .login-label { font-size: 0.8125rem; font-weight: 600; color: var(--corp-text-muted); }
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .login-input {
   width: 100%;
   padding: 0.625rem 0.875rem;
   font-size: 1rem;
   line-height: 1.5;
-<<<<<<< HEAD
-  color: #323130;
-  background: #fff;
-  border: 1px solid #edebe9;
-  border-radius: 6px;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
-}
-.login-input::placeholder {
-  color: #a19f9d;
-}
-.login-input:hover {
-  border-color: #c8c6c4;
-}
-.login-input:focus {
-  outline: none;
-  border-color: #0078d4;
-  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.2);
-}
-.login-input.is-invalid {
-  border-color: #d13438;
-}
-.login-input.is-invalid:focus {
-  box-shadow: 0 0 0 2px rgba(209, 52, 56, 0.2);
-}
-.login-invalid {
-  font-size: 0.8125rem;
-  color: #d13438;
-}
-.login-options {
-  display: flex;
-  align-items: center;
-}
-=======
   color: var(--text-primary);
   background: var(--surface-layer);
   border: 1px solid var(--corp-border);
@@ -2879,21 +1438,10 @@ body.dark-mode .fluent-pagination-info-text strong {
 .login-invalid { font-size: 0.8125rem; color: var(--red); }
 
 .login-options { display: flex; align-items: center; }
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .login-remember {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-<<<<<<< HEAD
-  font-size: 0.875rem;
-  color: #605e5c;
-  cursor: pointer;
-  margin: 0;
-}
-.login-remember input {
-  margin: 0;
-}
-=======
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--corp-text-muted);
@@ -2902,7 +1450,6 @@ body.dark-mode .fluent-pagination-info-text strong {
 }
 .login-remember input { margin: 0; }
 
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 .login-submit {
   display: inline-flex;
   align-items: center;
@@ -2912,45 +1459,6 @@ body.dark-mode .fluent-pagination-info-text strong {
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-<<<<<<< HEAD
-  background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: opacity 0.15s ease, transform 0.05s ease;
-  margin-top: 0.25rem;
-}
-.login-submit:hover {
-  color: #fff;
-  opacity: 0.95;
-}
-.login-submit:active {
-  transform: scale(0.99);
-}
-.login-footer {
-  text-align: center;
-  font-size: 0.8125rem;
-  color: #8a8886;
-  margin: 1.5rem 0 0 0;
-}
-body.dark-mode .login-page {
-  background: linear-gradient(145deg, #1a1d24 0%, #16181d 100%);
-}
-body.dark-mode .login-page-bg {
-  background-image:
-    radial-gradient(circle at 20% 80%, rgba(0, 120, 212, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(0, 120, 212, 0.05) 0%, transparent 50%);
-}
-body.dark-mode .login-card {
-  background: #22262e;
-  border-color: #2d323c;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
-}
-body.dark-mode .login-brand-title { color: #f3f4f6; }
-body.dark-mode .login-brand-tagline { color: #9ca3af; }
-body.dark-mode .login-label { color: #e5e7eb; }
-body.dark-mode .login-input {
-=======
   background: linear-gradient(135deg, var(--blue) 0%, var(--blue-hover) 100%);
   border: none;
   border-radius: var(--corp-radius);
@@ -3064,18 +1572,10 @@ body.dark-mode .corp-table thead th { background: #1a1d24; border-color: #2d323c
 body.dark-mode .corp-table tbody td { border-color: #2d323c; }
 body.dark-mode .form-control,
 body.dark-mode .form-select {
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
   background: #1a1d24;
   border-color: #2d323c;
   color: #f3f4f6;
 }
-<<<<<<< HEAD
-body.dark-mode .login-input::placeholder { color: #6b7280; }
-body.dark-mode .login-input:hover { border-color: #374151; }
-body.dark-mode .login-input:focus { border-color: #0078d4; }
-body.dark-mode .login-remember { color: #9ca3af; }
-body.dark-mode .login-footer { color: #6b7280; }
-=======
 body.dark-mode .form-control:focus,
 body.dark-mode .form-select:focus {
   border-color: #0078d4;
@@ -3199,4 +1699,3 @@ body.dark-mode .btn-link.btn-cancel:hover {
 
 .modal { z-index: 1060; }
 .modal-backdrop { z-index: 1050; }
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)

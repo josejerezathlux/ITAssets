@@ -53,11 +53,7 @@
     </div>
     <div class="mt-3">
         <button type="submit" class="btn btn-primary"><i class="bi bi-check-lg me-1"></i>Create role</button>
-<<<<<<< HEAD
-        <a href="{{ route('roles.index') }}" class="btn btn-outline-secondary">Cancel</a>
-=======
         <a href="{{ route('roles.index') }}" class="btn btn-cancel">Cancel</a>
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
     </div>
 </form>
 @endsection

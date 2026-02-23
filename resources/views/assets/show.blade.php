@@ -47,7 +47,7 @@
         <div class="d-flex gap-2 align-items-center flex-wrap">
             <span class="asset-qr-soon btn btn-outline-secondary disabled position-relative" aria-disabled="true" title="QR code coming soon">
                 <i class="bi bi-qr-code me-1"></i>QR code
-                <span class="badge badge-soon">Soon</span>
+                <span class="badge badge-soon ms-2">Soon</span>
             </span>
             @can('update', $asset)
                 <a href="{{ route('assets.edit', $asset) }}" class="btn btn-primary"><i class="bi bi-pencil me-1"></i>Edit</a>

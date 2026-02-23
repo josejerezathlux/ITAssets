@@ -2,13 +2,9 @@
 
 use App\Http\Controllers\AssetCategoryController;
 use App\Http\Controllers\AssetController;
-<<<<<<< HEAD
-use App\Http\Controllers\DashboardController;
-=======
 use App\Http\Controllers\AssetFinderController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DigitalAssetController;
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ReportController;
@@ -43,14 +39,11 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('departments', DepartmentController::class);
     Route::resource('rooms', RoomController::class);
     Route::resource('categories', AssetCategoryController::class);
-<<<<<<< HEAD
-=======
     Route::get('digital-assets/expiring', [DigitalAssetController::class, 'expiring'])->name('digital-assets.expiring');
     Route::post('digital-assets/{digital_asset}/assign', [DigitalAssetController::class, 'assign'])->name('digital-assets.assign');
     Route::delete('digital-assets/{digital_asset}/assignments/{assignment}', [DigitalAssetController::class, 'unassign'])->name('digital-assets.unassign');
     Route::resource('digital-assets', DigitalAssetController::class)->parameters(['digital-assets' => 'digital_asset']);
     Route::get('find-assets', [AssetFinderController::class, 'index'])->name('find-assets.index');
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
     Route::get('reports', [ReportController::class, 'index'])->name('reports.index');
     Route::get('reports/{type}', [ReportController::class, 'show'])->name('reports.show');
     Route::resource('users', UserController::class);

@@ -3,17 +3,10 @@
 @section('title', 'Dashboard')
 
 @section('content')
-<<<<<<< HEAD
-<div class="corp-page-header">
-    <div>
-        <h2 class="corp-page-title mb-1"><i class="bi bi-grid-1x2 me-2"></i>Dashboard</h2>
-        <p class="text-muted small mb-0">Asset inventory at a glance.</p>
-=======
 <div class="corp-page-header dashboard-header">
     <div>
         <h2 class="corp-page-title mb-1"><i class="bi bi-grid-1x2 me-2"></i>Dashboard</h2>
         <p class="text-muted small mb-0">Asset inventory, people, and locations at a glance. Click any card or chart to drill down.</p>
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
     </div>
 </div>
 
@@ -21,19 +14,12 @@
     <div class="fluent-info-card fluent-dismissible mb-3" data-dismiss-key="dashboard-overview">
         <i class="bi bi-info-circle-fill fluent-info-icon"></i>
         <div class="fluent-info-body">
-<<<<<<< HEAD
-            <div class="fluent-info-title">Overview</div>
-            <p class="mb-0 small">Asset inventory at a glance. Use <strong>Assets</strong> to manage devices and assignments.</p>
-=======
             <div class="fluent-info-title">Interactive overview</div>
             <p class="mb-0 small">Stats and charts link to filtered views. Use <strong>Find assets</strong> to browse by room or person, or open <strong>Reports</strong> for print-ready summaries.</p>
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
         </div>
         <button type="button" class="fluent-card-close" aria-label="Close"><i class="bi bi-x-lg"></i></button>
     </div>
 
-<<<<<<< HEAD
-=======
     {{-- Stats badges --}}
     <div class="dashboard-badges">
         @can('viewAny', App\Models\Asset::class)
@@ -74,7 +60,6 @@
     </div>
 
     {{-- Hero + status pills --}}
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
     <div class="dashboard-hero">
         <div class="dashboard-hero-main">
             <span class="dashboard-hero-label"><i class="bi bi-box-seam me-1"></i>Total assets</span>
@@ -92,25 +77,11 @@
                         default => 'dash-pill--neutral',
                     };
                 @endphp
-<<<<<<< HEAD
-=======
                 @can('viewAny', App\Models\Asset::class)
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
                 <a href="{{ route('assets.index', ['status' => $status]) }}" class="dashboard-pill {{ $statusClass }}">
                     <span class="dashboard-pill-value">{{ $count }}</span>
                     <span class="dashboard-pill-label">{{ ucfirst(str_replace('_', ' ', $status)) }}</span>
                 </a>
-<<<<<<< HEAD
-            @endforeach
-        </div>
-    </div>
-
-    <div class="dashboard-charts-row">
-        <div class="dashboard-chart-card">
-            <div class="corp-card-header"><i class="bi bi-pie-chart me-2"></i>By category</div>
-            <div class="corp-card-body dashboard-chart-body">
-                @if($assetsByCategory->isEmpty())
-=======
                 @else
                 <span class="dashboard-pill {{ $statusClass }}">
                     <span class="dashboard-pill-value">{{ $count }}</span>
@@ -195,7 +166,6 @@
             <div class="corp-card-header"><i class="bi bi-pie-chart me-2"></i>By category <span class="dashboard-chart-hint">(click segment)</span></div>
             <div class="corp-card-body dashboard-chart-body">
                 @if($chartCategories->isEmpty())
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
                     <p class="dashboard-empty mb-0">No categories yet.</p>
                 @else
                     <canvas id="chartCategories" height="220" aria-label="Assets by category"></canvas>
@@ -205,21 +175,13 @@
         <div class="dashboard-chart-card">
             <div class="corp-card-header"><i class="bi bi-bar-chart me-2"></i>By status</div>
             <div class="corp-card-body dashboard-chart-body">
-<<<<<<< HEAD
-                @if($assetsByStatus->isEmpty())
-=======
                 @if($chartStatus->isEmpty())
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
                     <p class="dashboard-empty mb-0">No assets yet.</p>
                 @else
                     <canvas id="chartStatus" height="220" aria-label="Assets by status"></canvas>
                 @endif
             </div>
         </div>
-<<<<<<< HEAD
-    </div>
-
-=======
         <div class="dashboard-chart-card" id="dashboard-chart-rooms-wrap">
             <div class="corp-card-header"><i class="bi bi-geo-alt me-2"></i>By room <span class="dashboard-chart-hint">(click bar)</span></div>
             <div class="corp-card-body dashboard-chart-body">
@@ -245,7 +207,6 @@
     @endif
 
     {{-- Bottom blocks grid --}}
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
     <div class="dashboard-bottom-row">
         <section class="dash-block">
             <header class="dash-block__header">
@@ -287,9 +248,6 @@
                 @endif
             </div>
         </section>
-<<<<<<< HEAD
-        <section class="dash-block dash-block--wide">
-=======
         <section class="dash-block">
             <header class="dash-block__header">
                 <i class="bi bi-box dash-block__icon" aria-hidden="true"></i>
@@ -314,7 +272,6 @@
             </div>
         </section>
         <section class="dash-block">
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
             <header class="dash-block__header">
                 <i class="bi bi-wrench dash-block__icon" aria-hidden="true"></i>
                 <h3 class="dash-block__title">Recent maintenance</h3>
@@ -324,11 +281,7 @@
                     <p class="dash-block__empty">No maintenance logs.</p>
                 @else
                     <div class="dash-block__list dash-block__list--maintenance" role="list">
-<<<<<<< HEAD
-                        @foreach($maintenanceRecent as $log)
-=======
                         @foreach($maintenanceRecent->take(5) as $log)
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
                             <a href="{{ route('assets.show', $log->asset) }}" class="dash-block__row dash-block__row--maintenance" role="listitem">
                                 <span class="dash-block__label">{{ $log->asset->asset_tag }}</span>
                                 <span class="dash-block__badge dash-block__badge--type">{{ $log->type }}</span>
@@ -339,8 +292,6 @@
                 @endif
             </div>
         </section>
-<<<<<<< HEAD
-=======
         <section class="dash-block">
             <header class="dash-block__header">
                 <i class="bi bi-person-check dash-block__icon" aria-hidden="true"></i>
@@ -384,7 +335,6 @@
                 @endif
             </div>
         </section>
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
     </div>
 </div>
 
@@ -403,11 +353,6 @@
 
     const categoriesData = @json($chartCategories);
     const statusData = @json($chartStatus);
-<<<<<<< HEAD
-
-    if (categoriesData.length && document.getElementById('chartCategories')) {
-        new Chart(document.getElementById('chartCategories'), {
-=======
     const roomsData = @json($chartRooms);
     const assetsIndexUrl = @json(route('assets.index'));
     const canViewAssets = @json(auth()->user()->can('viewAny', App\Models\Asset::class));
@@ -416,7 +361,6 @@
     if (categoriesData.length && document.getElementById('chartCategories')) {
         const ctx = document.getElementById('chartCategories').getContext('2d');
         const chartCategories = new Chart(ctx, {
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
             type: 'doughnut',
             data: {
                 labels: categoriesData.map(d => d.name),
@@ -431,11 +375,6 @@
                 maintainAspectRatio: false,
                 layout: { padding: { right: 8 } },
                 plugins: {
-<<<<<<< HEAD
-                    legend: { position: 'right', labels: { boxWidth: 12, padding: 10, font: { size: 11 } } }
-                },
-                cutout: '62%'
-=======
                     legend: { position: 'right', labels: { boxWidth: 12, padding: 10, font: { size: 11 } } },
                     tooltip: { enabled: true }
                 },
@@ -446,7 +385,6 @@
                         window.location.href = assetsIndexUrl + '?category_id=' + cat.id;
                     }
                 }
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
             }
         });
     }
@@ -478,8 +416,6 @@
             }
         });
     }
-<<<<<<< HEAD
-=======
 
     if (roomsData.length && document.getElementById('chartRooms')) {
         const ctxRooms = document.getElementById('chartRooms').getContext('2d');
@@ -515,7 +451,6 @@
             }
         });
     }
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 })();
 </script>
 @endpush

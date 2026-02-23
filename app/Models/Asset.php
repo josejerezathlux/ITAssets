@@ -63,12 +63,9 @@ class Asset extends Model
     {
         return $this->hasMany(ActivityLog::class);
     }
-<<<<<<< HEAD
-=======
 
     public function mapPlacement(): \Illuminate\Database\Eloquent\Relations\HasOne
     {
         return $this->hasOne(MapPlacement::class);
     }
->>>>>>> ac68b0e0 (Find Assets module implemented along with some customizations and logic improvements.)
 }
