@@ -1,0 +1,177 @@
+.license-expiry-view {
+  padding-bottom: 1.5rem;
+}
+
+.license-expiry-legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.license-expiry-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.license-expiry-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.license-expiry-dot--ok { background: #107c10; }
+.license-expiry-dot--warning { background: #c19c00; }
+.license-expiry-dot--critical { background: #d13438; }
+.license-expiry-dot--expired { background: #5c5c5c; }
+
+.license-expiry-dot--seg-green { background: #107c10; }
+.license-expiry-dot--seg-yellow { background: #e6b800; }
+.license-expiry-dot--seg-red { background: #d13438; }
+.license-expiry-dot--seg-expired { background: #2d2d2d; }
+
+.license-expiry-table .corp-table th,
+.license-expiry-table .corp-table td {
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.license-expiry-table .corp-table th {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--corp-text-muted);
+}
+
+.license-expiry-table tbody td {
+  font-size: 0.9375rem;
+}
+
+.license-expiry-name-cell {
+  white-space: nowrap;
+}
+
+.license-expiry-name-cell__inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.license-expiry-name-cell__inner .corp-link {
+  flex-shrink: 0;
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.license-expiry-progress {
+  flex: 1;
+  min-width: 4rem;
+  height: 6px;
+  background: var(--corp-bg-muted, rgba(0, 0, 0, 0.08));
+  border-radius: 3px;
+}
+
+.license-expiry-progress .progress-bar {
+  border-radius: 3px;
+  transition: width 0.2s ease;
+}
+
+.license-expiry-progress--seg-green .progress-bar { background: #107c10; }
+.license-expiry-progress--seg-yellow .progress-bar { background: #e6b800; }
+.license-expiry-progress--seg-red .progress-bar { background: #d13438; }
+.license-expiry-progress--seg-expired .progress-bar { background: #2d2d2d; }
+
+.license-expiry-row .corp-link {
+  text-decoration: none;
+}
+
+.license-expiry-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2em 0.45em;
+  border-radius: 3px;
+}
+
+.license-expiry-badge--ok {
+  background: var(--green-subtle);
+  color: var(--green);
+}
+
+.license-expiry-badge--warning {
+  background: var(--amber-subtle);
+  color: var(--amber);
+}
+
+.license-expiry-badge--critical {
+  background: var(--red-subtle);
+  color: var(--red);
+}
+
+.license-expiry-badge--seg-green {
+  background: var(--green-subtle);
+  color: var(--green);
+}
+
+.license-expiry-badge--seg-yellow {
+  background: var(--amber-subtle);
+  color: var(--amber);
+}
+
+.license-expiry-badge--seg-red {
+  background: var(--red-subtle);
+  color: var(--red);
+}
+
+.license-expiry-badge--expired,
+.license-expiry-badge--seg-expired {
+  background: #2d2d2d;
+  color: #e0e0e0;
+}
+
+@keyframes license-expiry-aura {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(45, 45, 45, 0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(45, 45, 45, 0); }
+}
+
+.license-expiry-badge--expired-aura {
+  animation: license-expiry-aura 1.5s ease-in-out infinite;
+}
+
+body.dark-mode .license-expiry-badge--expired-aura {
+  animation: license-expiry-aura-dark 1.5s ease-in-out infinite;
+}
+
+@keyframes license-expiry-aura-dark {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(120, 120, 120, 0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(120, 120, 120, 0); }
+}
+
+body.dark-mode .license-expiry-progress {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-mode .license-expiry-progress--seg-green .progress-bar { background: #7fdb7f; }
+body.dark-mode .license-expiry-progress--seg-yellow .progress-bar { background: #ffc933; }
+body.dark-mode .license-expiry-progress--seg-red .progress-bar { background: #f28b8e; }
+body.dark-mode .license-expiry-progress--seg-expired .progress-bar { background: #4a4a4a; }
+
+body.dark-mode .license-expiry-dot--ok { background: #7fdb7f; }
+body.dark-mode .license-expiry-dot--warning { background: #ffb366; }
+body.dark-mode .license-expiry-dot--critical { background: #f28b8e; }
+body.dark-mode .license-expiry-dot--expired { background: #6b7280; }
+body.dark-mode .license-expiry-dot--seg-expired { background: #4a4a4a; }
+
+body.dark-mode .license-expiry-badge--ok { background: rgba(16,124,16,0.25); color: #7fdb7f; }
+body.dark-mode .license-expiry-badge--warning { background: rgba(255,140,0,0.2); color: #ffb366; }
+body.dark-mode .license-expiry-badge--critical { background: rgba(209,52,56,0.25); color: #f28b8e; }
+body.dark-mode .license-expiry-badge--seg-green { background: rgba(16,124,16,0.25); color: #7fdb7f; }
+body.dark-mode .license-expiry-badge--seg-yellow { background: rgba(255,140,0,0.2); color: #ffc933; }
+body.dark-mode .license-expiry-badge--seg-red { background: rgba(209,52,56,0.25); color: #f28b8e; }
+body.dark-mode .license-expiry-badge--expired,
+body.dark-mode .license-expiry-badge--seg-expired { background: #3a3a3a; color: #e0e0e0; }

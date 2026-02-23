@@ -1,0 +1,369 @@
+/* ==========================================================================
+   Find Assets — Scoped. Matches app design; fewer borders.
+   ========================================================================== */
+
+.find-assets-view {
+  --find-head-bg: #fafafa;
+}
+
+/* Page header — same as app */
+.find-assets-view .corp-page-header {
+  margin-bottom: 1rem;
+}
+
+.find-assets-view .corp-page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--corp-text);
+  letter-spacing: -0.02em;
+}
+
+.find-assets-view .corp-page-title .bi {
+  margin-right: 0.5rem;
+  opacity: 0.9;
+}
+
+/* Filter bar — same card/radius as app; labels inherit .form-label */
+.find-assets-view .corp-card.mb-4 {
+  margin-bottom: 1rem !important;
+}
+
+.find-assets-view .corp-card-body.py-3 {
+  padding: 0.5rem 1rem;
+}
+
+.find-assets-view .corp-card .row.g-3 {
+  --bs-gutter-y: 0.5rem;
+  --bs-gutter-x: 0.75rem;
+}
+
+/* Room cards — same as app, no extra borders */
+.find-assets-view .find-room-card {
+  border: 1px solid var(--corp-border);
+  border-radius: var(--fluent-radius-lg);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.find-assets-view .find-room-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--fluent-primary-light);
+  color: var(--corp-primary);
+  border-radius: var(--corp-radius);
+  font-size: 0.9rem;
+}
+
+.find-assets-view .find-room-card .corp-card-header {
+  background: var(--fluent-bg);
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.find-assets-view .find-room-card .corp-card-header .badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25em 0.5em;
+}
+
+.find-assets-view .find-room-body {
+  max-height: 320px;
+  overflow: auto;
+  padding: 0;
+}
+
+.find-assets-view .find-room-body .small.text-muted {
+  padding: 0.5rem 0.75rem !important;
+  color: var(--corp-text-muted);
+  font-size: 0.8125rem;
+}
+
+/* Employee row — no background on the whole block */
+.find-assets-view .find-employee-row {
+  border: none;
+  border-radius: 0;
+  margin: 0 0.5rem 0.25rem;
+  overflow: hidden;
+  background: transparent;
+}
+
+.find-assets-view .find-employee-row:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.find-assets-view .find-employee-row.find-employee-row--unassigned {
+  background: transparent;
+}
+
+/* Only the employee name row (head) is light grey */
+.find-assets-view .find-employee-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  padding: 0.4rem 0.75rem 0.35rem;
+  border-bottom: none;
+  font-size: 0.8125rem;
+  background: var(--find-head-bg);
+}
+
+.find-assets-view .find-employee-avatar {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--fluent-primary-light);
+  color: var(--corp-primary);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.find-assets-view .find-employee-avatar--unassigned {
+  background: var(--fluent-bg-header);
+  color: var(--corp-text-muted);
+  font-size: 0.8rem;
+}
+
+.find-assets-view .find-employee-avatar--unassigned .bi {
+  font-size: 1em;
+}
+
+.find-assets-view .find-employee-name {
+  font-weight: 600;
+  color: var(--corp-text);
+  text-decoration: none;
+}
+
+.find-assets-view .find-employee-name:hover {
+  color: var(--corp-primary);
+}
+
+.find-assets-view .find-employee-unassigned {
+  color: var(--corp-text-muted);
+  font-weight: 500;
+}
+
+.find-assets-view .find-employee-count {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--corp-text-muted);
+  margin-left: auto;
+  padding: 0.15em 0.4em;
+  border-radius: var(--corp-radius);
+  background: transparent;
+}
+
+/* Asset list — no borders between items */
+.find-assets-view .find-asset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.find-assets-view .find-asset-item {
+  border-bottom: none;
+}
+
+.find-assets-view .find-asset-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  color: var(--corp-text);
+  text-decoration: none;
+  font-size: 0.8125rem;
+  transition: background 0.15s;
+}
+
+.find-assets-view .find-asset-row:hover {
+  background: var(--fluent-primary-light);
+}
+
+.find-assets-view .find-asset-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--fluent-primary-light);
+  color: var(--corp-primary);
+  border-radius: var(--corp-radius);
+  font-size: 0.75rem;
+}
+
+.find-assets-view .find-asset-tag {
+  font-weight: 500;
+  min-width: 0;
+}
+
+.find-assets-view .find-asset-cat {
+  font-size: 0.8125rem;
+  color: var(--corp-text-muted);
+  max-width: 6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.find-assets-view .find-asset-row .badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25em 0.5em;
+  border-radius: var(--corp-radius);
+}
+
+/* Empty state */
+.find-assets-view .corp-card .corp-card-body.text-center {
+  padding: 1.5rem 1rem;
+}
+
+.find-assets-view .corp-card .corp-card-body.text-center .display-4 {
+  font-size: 2rem;
+  color: var(--corp-text-muted);
+  opacity: 0.5;
+}
+
+.find-assets-view .corp-card .corp-card-body.text-center .h6 {
+  font-size: 0.9375rem;
+  color: var(--corp-text);
+  font-weight: 600;
+}
+
+.find-assets-view .corp-card .corp-card-body.text-center .text-muted.small {
+  font-size: 0.8125rem;
+}
+
+.find-assets-view .row.g-3 {
+  --bs-gutter-y: 0.75rem;
+  --bs-gutter-x: 0.75rem;
+}
+
+/* Dark mode */
+body.dark-mode .find-assets-view {
+  --find-head-bg: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .find-assets-view .corp-page-title {
+  color: #f3f4f6;
+}
+
+body.dark-mode .find-assets-view .corp-page-header .text-muted {
+  color: #9ca3af;
+}
+
+/* Filter card */
+body.dark-mode .find-assets-view .corp-card.mb-4 {
+  background: #22262e;
+  border: 1px solid #2d323c;
+}
+
+body.dark-mode .find-assets-view .corp-card .form-label {
+  color: #9ca3af;
+}
+
+body.dark-mode .find-assets-view .corp-card .form-control,
+body.dark-mode .find-assets-view .corp-card .form-select {
+  background: #1a1d24;
+  border-color: #2d323c;
+  color: #f3f4f6;
+}
+
+body.dark-mode .find-assets-view .corp-card .form-control::placeholder {
+  color: #6b7280;
+}
+
+body.dark-mode .find-assets-view .corp-card .form-control:focus,
+body.dark-mode .find-assets-view .corp-card .form-select:focus {
+  border-color: #0078d4;
+  background: #1a1d24;
+  color: #f3f4f6;
+}
+
+/* Room cards */
+body.dark-mode .find-assets-view .find-room-card {
+  background: #22262e;
+  border: 1px solid #2d323c;
+}
+
+body.dark-mode .find-assets-view .find-room-icon {
+  background: rgba(0, 120, 212, 0.25);
+  color: #6cb8f6;
+}
+
+body.dark-mode .find-assets-view .find-room-card .corp-card-header {
+  background: #22262e;
+  border-bottom: 1px solid #2d323c;
+}
+
+body.dark-mode .find-assets-view .find-room-body .small.text-muted {
+  color: #9ca3af;
+}
+
+/* Employee rows */
+body.dark-mode .find-assets-view .find-employee-head {
+  background: var(--find-head-bg);
+}
+
+body.dark-mode .find-assets-view .find-employee-name,
+body.dark-mode .find-assets-view .find-employee-unassigned,
+body.dark-mode .find-assets-view .find-employee-count {
+  color: #f3f4f6;
+}
+
+body.dark-mode .find-assets-view .find-employee-avatar {
+  background: rgba(0, 120, 212, 0.25);
+  color: #6cb8f6;
+}
+
+body.dark-mode .find-assets-view .find-employee-avatar--unassigned {
+  background: rgba(255, 255, 255, 0.08);
+  color: #9ca3af;
+}
+
+/* Asset rows */
+body.dark-mode .find-assets-view .find-asset-row {
+  color: #f3f4f6;
+}
+
+body.dark-mode .find-assets-view .find-asset-row:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .find-assets-view .find-asset-cat {
+  color: #9ca3af;
+}
+
+body.dark-mode .find-assets-view .find-asset-icon {
+  background: rgba(0, 120, 212, 0.25);
+  color: #6cb8f6;
+}
+
+body.dark-mode .find-assets-view .find-employee-name:hover {
+  color: #6cb8f6;
+}
+
+/* Empty state */
+body.dark-mode .find-assets-view .corp-card .corp-card-body.text-center .h6 {
+  color: #f3f4f6;
+}
+
+body.dark-mode .find-assets-view .corp-card .corp-card-body.text-center .text-muted.small,
+body.dark-mode .find-assets-view .corp-card .corp-card-body.text-center .display-4 {
+  color: #9ca3af;
+}
